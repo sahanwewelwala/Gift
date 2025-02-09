@@ -1,0 +1,360 @@
+/* Global Styles */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FCFAEE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Animations */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pop-in {
+  animation: pop-in 1s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 1s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 1s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 2s ease-in;
+}
+
+.animate-rotate {
+  animation: rotate 5s linear infinite;
+}
+
+.animate-scale {
+  animation: scale 1.5s ease-in-out infinite alternate;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+}
+
+.text-container {
+  flex: 1;
+  margin-top: 200px;
+  text-align: left;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 78px;
+  color: #CF4B47;
+}
+
+h2 {
+  font-family: 'Yellowtail', cursive;
+  font-size: 78px;
+  font-weight: normal;
+  color: #CF4B47;
+}
+
+.image-container {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  position: relative;
+  max-width: 600px;
+  height: 400px;
+}
+
+.image {
+  position: relative;
+  width: 50%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image1 {
+  top: 20px;
+  left: 400px;
+  z-index: 1;
+}
+
+.image2 {
+  top: 20px;
+  left: 450px;
+  z-index: 2;
+}
+
+.image3 {
+  top: 250px;
+  left: 0px;
+  z-index: 3;
+}
+
+.image4 {
+  top: 200px;
+  left: 100px;
+  z-index: 3;
+}
+
+/* Playlist Section */
+.playlist-section {
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+  background-color: #FCFBEF;
+  padding-bottom: 20px;
+}
+
+.playlist-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #CF4B47;
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.playlist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 5%;
+}
+
+.playlist-item img {
+  width: 280px;
+  height: 280px;
+  background-color: #ccc;
+  margin: 0 10px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.playlist-item .text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 3%;
+}
+
+.playlist-item p.date {
+  color: #2e2e2e;
+  font-family: 'Poppins', serif;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.playlist-item p.text {
+  margin: 0;
+  font-size: 24px;
+  color: #CF4B47;
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Tokens Section */
+.tokens-section {
+  text-align: center;
+  margin: 50px auto;
+  width: 100%;
+  background-color: #D09D9B;
+  padding-bottom: 20px;
+}
+
+.tokens-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.tokens-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tokens-container img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  object-fit: contain;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+/* Note Section */
+.note-section {
+  text-align: center;
+  margin: 10px auto;
+  width: 100%;
+  background-color: #FCFAEE;
+  color: #CF4B47;
+  padding: 20px 0;
+}
+
+.note-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #CF4B47;
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.note-section p {
+  font-family: 'Playwrite GB J Guides', serif;
+  font-size: 20px;
+  padding: 0 20%;
+  line-height: 1.6;
+}
+
+/* Magical Moments Section */
+.magical-moments {
+  text-align: center;
+  margin: 50px auto;
+  width: 80%;
+}
+
+.magical-moments h2 {
+  font-family: 'Playfair Display', serif;
+  color: #CF4B47;
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.magical-moments h2::before,
+.magical-moments h2::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background: #CF4B47;
+  top: 50%;
+  width: 100px;
+}
+
+.magical-moments h2::before {
+  right: 100%;
+  margin-right: 20px;
+}
+
+.magical-moments h2::after {
+  left: 100%;
+  margin-left: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gallery img {
+  width: auto;
+  height: 250px;
+  margin: 10px;
+  object-fit: contain;
+  background-color: #ccc;
+  border-radius: 8px;
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #FCFAEE;
+  color: #2e2e2e;
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  border-top: 1px solid #CF4B47;
+}
+
+.footer .love-pookie {
+  color: #CF4B47;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Header adjustments: Keep row layout so text remains on the left and images on the right */
+}

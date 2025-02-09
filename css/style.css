@@ -1,0 +1,124 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body with calm background image */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('https://img.freepik.com/free-photo/cards-with-love-title-near-decorative-heart-candy-canes_23-2148005831.jpg?t=st=1738867642~exp=1738871242~hmac=49b2e7cdcc4677852aecd6afdbee22b8a8d9653f0eacd6f272430b223d3a20c3&w=2024'); /* Calm nature image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Login container */
+.login-container {
+  background: rgba(54, 54, 54, 0.25); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Heading */
+h1 {
+  font-family: 'Oooh Baby', cursive; /* Romantic handwritten font */
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Paragraph */
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+/* Label */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Date input */
+input[type="date"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(45deg, #9381ff, #b8b8ff); /* Romantic gradient */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(255, 253, 253, 0.5);
+}
+
+/* Error message */
+.error {
+  color: #ffffff;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
