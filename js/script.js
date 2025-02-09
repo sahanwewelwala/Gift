@@ -2,7 +2,7 @@ document.getElementById('login-form').addEventListener('submit', function (event
   event.preventDefault(); // Prevent form submission
 
   const enteredDate = document.getElementById('login-date').value;
-  const correctDate = '2022-09-11'; // Replace with your correct date
+  const correctDate = '2022-09-12'; // Replace with your correct date
 
   if (enteredDate === correctDate) {
     alert('Login successful! Redirecting...');
